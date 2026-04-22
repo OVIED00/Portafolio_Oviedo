@@ -107,6 +107,8 @@ window.addEventListener('scroll', () => {
   handleReveal();
 });
 
+document.getElementById("year").textContent = new Date().getFullYear();
+
 // ── HAMBURGER MENU ───────────────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
