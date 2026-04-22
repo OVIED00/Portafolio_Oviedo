@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Pablo Oviedo — Dev & Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>JPO<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">Sobre mí</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Proyectos</a></li>
+      <li><a href="#contact" class="nav-link">Contacto</a></li>
+    </ul>
+    <button class="nav-cta" onclick="scrollToContact()">Contáctame</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobile()">Sobre mí</a></li>
+      <li><a href="#skills" onclick="closeMobile()">Skills</a></li>
+      <li><a href="#projects" onclick="closeMobile()">Proyectos</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-tag reveal-up delay-1">
+        <span class="dot"></span> Disponible para proyectos
+      </div>
+
+      <h1 class="hero-title reveal-up delay-2">
+        <span class="line-wrap"><span>Juan Pablo</span></span>
+        <span class="line-wrap"><span class="outline-text">Oviedo</span></span>
+        <span class="line-wrap"><span>Herrera</span></span>
+      </h1>
+
+      <div class="hero-roles reveal-up delay-3">
+        <span class="role active" data-role="0">Frontend Developer</span>
+        <span class="role" data-role="1">UX/UI Designer</span>
+        <span class="role" data-role="2">Graphic Designer</span>
+      </div>
+
+      <p class="hero-desc reveal-up delay-4">
+        Tecnólogo en Desarrollo de Software · Técnico en Diseño Gráfico · 20 años<br/>
+        Construyo interfaces que <em>se sienten</em> tan bien como se ven.
+      </p>
+
+      <div class="hero-actions reveal-up delay-5">
+        <a href="#projects" class="btn-primary">Ver proyectos <span>→</span></a>
+        <a href="#skills" class="btn-ghost">Mis habilidades</a>
+      </div>
+    </div>
+
+    <div class="hero-3d-container">
+      <div class="cube-scene">
+        <div class="cube">
+          <div class="cube-face front"><span>&lt;/&gt;</span></div>
+          <div class="cube-face back"><span>UI</span></div>
+          <div class="cube-face right"><span>UX</span></div>
+          <div class="cube-face left"><span>RX</span></div>
+          <div class="cube-face top"><span>JS</span></div>
+          <div class="cube-face bottom"><span>CSS</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── MARQUEE ─── -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span>React</span><span>·</span>
+      <span>TypeScript</span><span>·</span>
+      <span>Angular</span><span>·</span>
+      <span>Node.js</span><span>·</span>
+      <span>REST APIs</span><span>·</span>
+      <span>UI Design</span><span>·</span>
+      <span>Bootstrap</span><span>·</span>
+      <span>SQL</span><span>·</span>
+      <span>Figma</span><span>·</span>
+      <span>Scrum</span><span>·</span>
+      <span>React</span><span>·</span>
+      <span>TypeScript</span><span>·</span>
+      <span>Angular</span><span>·</span>
+      <span>Node.js</span><span>·</span>
+      <span>REST APIs</span><span>·</span>
+      <span>UI Design</span><span>·</span>
+      <span>Bootstrap</span><span>·</span>
+      <span>SQL</span><span>·</span>
+      <span>Figma</span><span>·</span>
+      <span>Scrum</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">01</span>
+        <span class="label-line"></span>
+        <span>Sobre mí</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal-up delay-1">
+          <h2 class="section-title">Donde el código<br/><span class="accent">se encuentra</span><br/>con el diseño</h2>
+          <p>Soy Juan Pablo Oviedo, desarrollador frontend y diseñador gráfico con sede en Colombia. Con 20 años y una base doble — tecnología <em>y</em> diseño — construyo productos digitales que no solo funcionan perfectamente, sino que también se ven excepcionales.</p>
+          <p>Mi enfoque une la lógica del código con la intuición del diseño. Cada botón, cada transición, cada micro-interacción es una decisión consciente orientada al usuario.</p>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-num counter" data-target="20">0</span>
+              <span class="stat-label">Años</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Años exp.</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Café</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal-up delay-2">
+          <div class="about-card-3d" id="aboutCard">
+            <div class="card-inner">
+              <div class="card-avatar">
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring ring-2"></div>
+                <div class="avatar-circle">
+                  <span class="avatar-initials">JP</span>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>Juan Pablo Oviedo</h3>
+                <p class="card-role">Frontend Dev · UI Designer</p>
+                <div class="card-tags">
+                  <span>React</span>
+                  <span>Angular</span>
+                  <span>TypeScript</span>
+                  <span>Figma</span>
+                </div>
+              </div>
+              <div class="card-glow"></div>
+            </div>
+          </div>
+
+          <div class="floating-badges">
+            <div class="badge badge-1 float-anim">
+              <span>🎨</span> Diseño Gráfico
+            </div>
+            <div class="badge badge-2 float-anim delay-float">
+              <span>⚡</span> Angular
+            </div>
+            <div class="badge badge-3 float-anim delay-float-2">
+              <span>🔗</span> REST APIs
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="skills section-padding" id="skills">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">02</span>
+        <span class="label-line"></span>
+        <span>Habilidades</span>
+      </div>
+
+      <h2 class="section-title reveal-up delay-1">Stack tecnológico<br/><span class="accent">& competencias</span></h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-category reveal-up delay-1">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🖥️</div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="90">
+              <div class="skill-info"><span>React</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:90%"></div></div>
+            </div>
+            <div class="skill-item" data-level="85">
+              <div class="skill-info"><span>Angular</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:85%"></div></div>
+            </div>
+            <div class="skill-item" data-level="92">
+              <div class="skill-info"><span>JavaScript / TypeScript</span><span class="skill-pct">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:92%"></div></div>
+            </div>
+            <div class="skill-item" data-level="95">
+              <div class="skill-info"><span>HTML5 / CSS3</span><span class="skill-pct">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:95%"></div></div>
+            </div>
+            <div class="skill-item" data-level="88">
+              <div class="skill-info"><span>Bootstrap / Responsive</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:88%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-2">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">🎨</div>
+            <h3>Diseño</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="95">
+              <div class="skill-info"><span>UX/UI Design</span><span class="skill-pct">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:95%"></div></div>
+            </div>
+            <div class="skill-item" data-level="92">
+              <div class="skill-info"><span>Diseño Gráfico</span><span class="skill-pct">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:92%"></div></div>
+            </div>
+            <div class="skill-item" data-level="85">
+              <div class="skill-info"><span>Figma / Prototipado</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:85%"></div></div>
+            </div>
+            <div class="skill-item" data-level="80">
+              <div class="skill-info"><span>Adobe Suite</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:80%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-3">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon">⚙️</div>
+            <h3>Backend & Otros</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="70">
+              <div class="skill-info"><span>Node.js</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:70%"></div></div>
+            </div>
+            <div class="skill-item" data-level="65">
+              <div class="skill-info"><span>SQL</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:65%"></div></div>
+            </div>
+            <div class="skill-item" data-level="88">
+              <div class="skill-info"><span>REST APIs</span><span class="skill-pct">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:88%"></div></div>
+            </div>
+            <div class="skill-item" data-level="82">
+              <div class="skill-info"><span>Scrum / Agile</span><span class="skill-pct">82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" style="--target:82%"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tech Orbs -->
+      <div class="tech-orbs reveal-up delay-4">
+        <div class="tech-orb" data-tech="React">
+          <div class="orb-inner">⚛️</div>
+          <span>React</span>
+        </div>
+        <div class="tech-orb" data-tech="Angular">
+          <div class="orb-inner">🅰️</div>
+          <span>Angular</span>
+        </div>
+        <div class="tech-orb" data-tech="TypeScript">
+          <div class="orb-inner">🔷</div>
+          <span>TypeScript</span>
+        </div>
+        <div class="tech-orb" data-tech="Node.js">
+          <div class="orb-inner">🟩</div>
+          <span>Node.js</span>
+        </div>
+        <div class="tech-orb" data-tech="Figma">
+          <div class="orb-inner">🎨</div>
+          <span>Figma</span>
+        </div>
+        <div class="tech-orb" data-tech="Bootstrap">
+          <div class="orb-inner">🅱️</div>
+          <span>Bootstrap</span>
+        </div>
+        <div class="tech-orb" data-tech="SQL">
+          <div class="orb-inner">🗄️</div>
+          <span>SQL</span>
+        </div>
+        <div class="tech-orb" data-tech="CSS3">
+          <div class="orb-inner">🎨</div>
+          <span>CSS3</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">03</span>
+        <span class="label-line"></span>
+        <span>Qué ofrezco</span>
+      </div>
+
+      <h2 class="section-title reveal-up delay-1">Servicios &<br/><span class="accent">capacidades</span></h2>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal-up delay-1">
+          <div class="service-icon">
+            <div class="icon-3d">
+              <span>🖼️</span>
+            </div>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Diseño de interfaces centradas en el usuario. Wireframes, prototipos interactivos y sistemas de diseño coherentes que convierten visitas en clientes.</p>
+          <div class="service-tags">
+            <span>Figma</span><span>Prototipado</span><span>Design System</span>
+          </div>
+          <div class="service-line"></div>
+        </div>
+
+        <div class="service-card featured reveal-up delay-2">
+          <div class="service-badge">⭐ Principal</div>
+          <div class="service-icon">
+            <div class="icon-3d">
+              <span>💻</span>
+            </div>
+          </div>
+          <h3>Frontend Development</h3>
+          <p>Implementación de interfaces responsivas con React y Angular. Componentes reutilizables, integración con APIs REST y optimización de rendimiento en múltiples dispositivos.</p>
+          <div class="service-tags">
+            <span>React</span><span>Angular</span><span>TypeScript</span><span>Bootstrap</span>
+          </div>
+          <div class="service-line"></div>
+        </div>
+
+        <div class="service-card reveal-up delay-3">
+          <div class="service-icon">
+            <div class="icon-3d">
+              <span>🎨</span>
+            </div>
+          </div>
+          <h3>Diseño Gráfico</h3>
+          <p>Identidad visual, branding y materiales gráficos digitales. Combinando creatividad artística con principios de comunicación visual efectiva.</p>
+          <div class="service-tags">
+            <span>Branding</span><span>Adobe</span><span>Identidad</span>
+          </div>
+          <div class="service-line"></div>
+        </div>
+
+        <div class="service-card reveal-up delay-4">
+          <div class="service-icon">
+            <div class="icon-3d">
+              <span>🔗</span>
+            </div>
+          </div>
+          <h3>Integración de APIs</h3>
+          <p>Consumo e integración de APIs REST para aplicaciones dinámicas. Manejo de estados, autenticación y gestión eficiente de datos en tiempo real.</p>
+          <div class="service-tags">
+            <span>REST APIs</span><span>Node.js</span><span>Fetch/Axios</span>
+          </div>
+          <div class="service-line"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="projects section-padding" id="projects">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">04</span>
+        <span class="label-line"></span>
+        <span>Proyectos</span>
+      </div>
+
+      <h2 class="section-title reveal-up delay-1">Trabajo<br/><span class="accent">destacado</span></h2>
+
+      <div class="projects-grid">
+
+        <!-- 0 · SISTEMA ADMINISTRATIVO FUNERARIA (full-width, proyecto empresa) -->
+        <div class="project-card funeraria-card reveal-up delay-1">
+          <div class="project-visual vis-funeraria">
+            <div class="fun-visual">
+
+              <!-- Top bar -->
+              <div class="fun-topbar">
+                <span class="fun-logo">✝ Sistema Administrativo · Funeraria</span>
+                <div class="fun-topbar-dots">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                </div>
+              </div>
+
+              <div class="fun-body">
+                <!-- Left sidebar navigation -->
+                <div class="fun-sidebar">
+                  <div class="fun-nav-item fn-active"><span>🏠</span><span>Dashboard</span></div>
+                  <div class="fun-nav-item"><span>⚰️</span><span>Servicios</span></div>
+                  <div class="fun-nav-item"><span>📞</span><span>Call Center</span></div>
+                  <div class="fun-nav-item"><span>💳</span><span>Pagos</span></div>
+                  <div class="fun-nav-item"><span>📋</span><span>Contratos</span></div>
+                  <div class="fun-nav-item"><span>📊</span><span>Reportería</span></div>
+                  <div class="fun-nav-item"><span>🔒</span><span>Permisos</span></div>
+                  <div class="fun-nav-item"><span>📬</span><span>PQRS</span></div>
+                </div>
+
+                <!-- Main content area -->
+                <div class="fun-main">
+                  <!-- KPI row -->
+                  <div class="fun-kpi-row">
+                    <div class="fun-kpi k1">
+                      <span class="fun-kpi-icon">⚰️</span>
+                      <div>
+                        <div class="fun-kpi-num">248</div>
+                        <div class="fun-kpi-label">Servicios activos</div>
+                      </div>
+                    </div>
+                    <div class="fun-kpi k2">
+                      <span class="fun-kpi-icon">📞</span>
+                      <div>
+                        <div class="fun-kpi-num">1,340</div>
+                        <div class="fun-kpi-label">Llamadas mes</div>
+                      </div>
+                    </div>
+                    <div class="fun-kpi k3">
+                      <span class="fun-kpi-icon">💳</span>
+                      <div>
+                        <div class="fun-kpi-num">$98M</div>
+                        <div class="fun-kpi-label">Recaudo</div>
+                      </div>
+                    </div>
+                    <div class="fun-kpi k4">
+                      <span class="fun-kpi-icon">📬</span>
+                      <div>
+                        <div class="fun-kpi-num">12</div>
+                        <div class="fun-kpi-label">PQRS pendientes</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Middle: chart + table -->
+                  <div class="fun-mid">
+                    <div class="fun-chart-area">
+                      <div class="fun-chart-title">Servicios / Mes</div>
+                      <div class="fun-chart-bars">
+                        <div class="fun-bar" style="--h:55%"><span>Ene</span></div>
+                        <div class="fun-bar" style="--h:70%"><span>Feb</span></div>
+                        <div class="fun-bar" style="--h:45%"><span>Mar</span></div>
+                        <div class="fun-bar" style="--h:80%"><span>Abr</span></div>
+                        <div class="fun-bar" style="--h:60%"><span>May</span></div>
+                        <div class="fun-bar active-bar" style="--h:90%"><span>Jun</span></div>
+                      </div>
+                    </div>
+                    <div class="fun-table-area">
+                      <div class="fun-table-title">Contratos recientes</div>
+                      <div class="fun-table-row header-row">
+                        <span>Cliente</span><span>Estado</span><span>Valor</span>
+                      </div>
+                      <div class="fun-table-row">
+                        <span>J. Martínez</span>
+                        <span class="fun-status s-active">Activo</span>
+                        <span>$1.2M</span>
+                      </div>
+                      <div class="fun-table-row">
+                        <span>C. Restrepo</span>
+                        <span class="fun-status s-pend">Pendiente</span>
+                        <span>$850K</span>
+                      </div>
+                      <div class="fun-table-row">
+                        <span>M. Gómez</span>
+                        <span class="fun-status s-active">Activo</span>
+                        <span>$2.1M</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Module pills at bottom -->
+                  <div class="fun-modules">
+                    <div class="fun-module-pill">⚰️ Serv. fúnebres</div>
+                    <div class="fun-module-pill">📞 Call Center</div>
+                    <div class="fun-module-pill">💳 Pagos Wompi</div>
+                    <div class="fun-module-pill">🔒 Roles & Permisos</div>
+                    <div class="fun-module-pill">📋 Contratos</div>
+                    <div class="fun-module-pill">📊 Reportería</div>
+                    <div class="fun-module-pill">📬 PQRS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-info fun-info">
+            <div class="fun-company-badge">🏢 Proyecto Empresarial</div>
+            <div class="project-tags">
+              <span>Angular</span><span>TypeScript</span><span>Node.js</span><span>SQL</span>
+              <span>REST API</span><span>Wompi</span><span>Tailwind CSS</span>
+            </div>
+            <h3>Sistema Administrativo Integral — Funeraria</h3>
+            <p>
+              Plataforma empresarial de gran escala para la gestión completa de una funeraria.
+              Desde la apertura de un servicio fúnebre hasta el cierre contable, todo centralizado en un solo sistema:
+              <strong>módulo de servicios fúnebres, call center, pasarela de pagos (Wompi), control de permisos por roles,
+              gestión de contratos, generación de reportes y documentos, y sistema PQRS</strong>.
+              Trabajo colaborativo bajo metodología ágil Scrum.
+            </p>
+            <div class="fun-features">
+              <div class="fun-feat"><span>⚰️</span> Servicios fúnebres</div>
+              <div class="fun-feat"><span>📞</span> Call Center</div>
+              <div class="fun-feat"><span>💳</span> Pagos en línea</div>
+              <div class="fun-feat"><span>🔒</span> Permisos & Roles</div>
+              <div class="fun-feat"><span>📋</span> Gestión de contratos</div>
+              <div class="fun-feat"><span>📊</span> Reportería & Docs</div>
+              <div class="fun-feat"><span>📬</span> PQRS</div>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1 · VENTAS DE CURSOS (grande, proyecto de graduación) -->
+        <div class="project-card large reveal-up delay-1">
+          <div class="project-visual vis-courses">
+            <div class="courses-visual">
+              <!-- Browser frame -->
+              <div class="cv-browser">
+                <div class="cv-bar">
+                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  <div class="url-bar">cursosapp.com</div>
+                  <span class="cv-grad-badge">⭐ Proyecto de Grado</span>
+                </div>
+                <div class="cv-body">
+                  <div class="cv-sidebar">
+                    <div class="cv-nav-item active-nav"></div>
+                    <div class="cv-nav-item"></div>
+                    <div class="cv-nav-item"></div>
+                    <div class="cv-nav-item"></div>
+                  </div>
+                  <div class="cv-main">
+                    <div class="cv-hero-strip"></div>
+                    <div class="cv-course-cards">
+                      <div class="cv-course-card">
+                        <div class="cv-course-thumb c-thumb-1"></div>
+                        <div class="cv-course-line"></div>
+                        <div class="cv-course-line short"></div>
+                        <div class="cv-price-badge">$29</div>
+                      </div>
+                      <div class="cv-course-card">
+                        <div class="cv-course-thumb c-thumb-2"></div>
+                        <div class="cv-course-line"></div>
+                        <div class="cv-course-line short"></div>
+                        <div class="cv-price-badge">$49</div>
+                      </div>
+                      <div class="cv-course-card">
+                        <div class="cv-course-thumb c-thumb-3"></div>
+                        <div class="cv-course-line"></div>
+                        <div class="cv-course-line short"></div>
+                        <div class="cv-price-badge">$19</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-badge-grad">🎓 Proyecto de Graduación</div>
+            <div class="project-tags">
+              <span>React</span><span>JavaScript</span><span>Node.js</span><span>SQL</span>
+            </div>
+            <h3>Plataforma de Venta de Cursos Virtuales</h3>
+            <p>Aplicación full-stack para la comercialización de cursos en línea. Incluye catálogo de cursos, sistema de autenticación, carrito de compras, gestión de usuarios y panel administrativo. Backend con Node.js y base de datos SQL; frontend moderno en React.</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 · DASHBOARD ANALYTICS -->
+        <div class="project-card reveal-up delay-2">
+          <div class="project-visual vis-1">
+            <div class="project-mockup">
+              <div class="browser-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <div class="url-bar">analytics.dashboard/stats</div>
+              </div>
+              <div class="browser-content">
+                <div class="mock-sidebar"></div>
+                <div class="mock-main">
+                  <div class="mock-header"></div>
+                  <div class="mock-cards">
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                    <div class="mock-card"></div>
+                  </div>
+                  <div class="mock-chart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Angular</span><span>TypeScript</span><span>REST API</span><span>SQL</span>
+            </div>
+            <h3>Dashboard de Estadísticas Analíticas</h3>
+            <p>Panel de control con visualización de métricas en tiempo real. Gráficas interactivas, KPIs dinámicos y componentes reutilizables conectados a APIs REST con Angular.</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 · RASTREO GPS -->
+        <div class="project-card reveal-up delay-3">
+          <div class="project-visual vis-gps">
+            <div class="gps-visual">
+              <!-- Map grid background -->
+              <div class="gps-map-bg">
+                <div class="gps-road r-h r1"></div>
+                <div class="gps-road r-h r2"></div>
+                <div class="gps-road r-h r3"></div>
+                <div class="gps-road r-v rv1"></div>
+                <div class="gps-road r-v rv2"></div>
+                <div class="gps-road r-v rv3"></div>
+                <!-- Blocks -->
+                <div class="gps-block gb1"></div>
+                <div class="gps-block gb2"></div>
+                <div class="gps-block gb3"></div>
+                <div class="gps-block gb4"></div>
+              </div>
+              <!-- Device pins -->
+              <div class="gps-pin pin-main" style="left:52%;top:28%">
+                <div class="gps-pin-dot main-dot"></div>
+                <div class="gps-ping"></div>
+              </div>
+              <div class="gps-pin" style="left:30%;top:55%">
+                <div class="gps-pin-dot"></div>
+                <div class="gps-ping"></div>
+              </div>
+              <div class="gps-pin" style="left:68%;top:60%">
+                <div class="gps-pin-dot"></div>
+                <div class="gps-ping"></div>
+              </div>
+              <div class="gps-pin" style="left:45%;top:68%">
+                <div class="gps-pin-dot"></div>
+                <div class="gps-ping"></div>
+              </div>
+              <!-- Sidebar overlay -->
+              <div class="gps-sidebar-overlay">
+                <div class="gps-title-bar">📍 Dispositivos (29/29)</div>
+                <div class="gps-device-row"><span class="gps-dot-green"></span><div class="gps-device-line"></div></div>
+                <div class="gps-device-row"><span class="gps-dot-green"></span><div class="gps-device-line short"></div></div>
+                <div class="gps-device-row"><span class="gps-dot-red"></span><div class="gps-device-line"></div></div>
+                <div class="gps-device-row"><span class="gps-dot-green"></span><div class="gps-device-line short"></div></div>
+              </div>
+              <!-- Google Maps badge -->
+              <div class="gps-api-badge">Google Maps API</div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Google Maps API</span><span>SQL</span><span>Tailwind CSS</span>
+            </div>
+            <h3>Sistema de Rastreo GPS</h3>
+            <p>Plataforma de monitoreo GPS en tiempo real para flotas de dispositivos. Integración con Google Maps API, estado online/offline, nivel de batería y señal 4G por dispositivo.</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 · PASARELA DE PAGOS -->
+        <div class="project-card reveal-up delay-4">
+          <div class="project-visual vis-pay">
+            <div class="pay-visual">
+              <!-- Stepper -->
+              <div class="pay-stepper">
+                <div class="pay-step active-step">
+                  <div class="ps-circle active-circle">🪪</div>
+                  <span>Cédula</span>
+                </div>
+                <div class="ps-line"></div>
+                <div class="pay-step">
+                  <div class="ps-circle">📄</div>
+                  <span>Contrato</span>
+                </div>
+                <div class="ps-line"></div>
+                <div class="pay-step">
+                  <div class="ps-circle">💳</div>
+                  <span>Pago</span>
+                </div>
+                <div class="ps-line"></div>
+                <div class="pay-step">
+                  <div class="ps-circle">✅</div>
+                  <span>Listo</span>
+                </div>
+              </div>
+              <!-- Card mock -->
+              <div class="pay-card-mock">
+                <div class="pcm-label">Número de cédula</div>
+                <div class="pcm-input">
+                  <span>Ej: 1234567890</span>
+                </div>
+                <div class="pcm-btn">
+                  <span>🔍</span> Buscar Contratos
+                </div>
+              </div>
+              <!-- Wompi badge -->
+              <div class="wompi-badge">
+                <span class="wompi-w">W</span> Wompi
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Wompi</span><span>Tailwind CSS</span><span>REST API</span>
+            </div>
+            <h3>Pasarela de Pagos en Línea</h3>
+            <p>Módulo de pagos en línea integrado con Wompi. Flujo paso a paso (cédula → contrato → pago → comprobante), validaciones en tiempo real y diseño responsive adaptado a diferentes dispositivos.</p>
+            <div class="project-links">
+              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="contact section-padding" id="contact">
+    <div class="container">
+      <div class="section-label reveal-up">
+        <span class="label-num">05</span>
+        <span class="label-line"></span>
+        <span>Contacto</span>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-text reveal-up delay-1">
+          <h2 class="section-title">¿Tienes un<br/><span class="accent">proyecto</span><br/>en mente?</h2>
+          <p>Estoy siempre abierto a nuevos proyectos, colaboraciones y oportunidades. No dudes en escribirme.</p>
+
+          <div class="contact-info-items">
+            <div class="contact-info-item">
+              <div class="ci-icon">📍</div>
+              <div>
+                <span class="ci-label">Ubicación</span>
+                <span class="ci-value">Colombia</span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon">🎓</div>
+              <div>
+                <span class="ci-label">Formación</span>
+                <span class="ci-value">Tecnólogo en Des. de Software · Técnico en Diseño Gráfico</span>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon">⚡</div>
+              <div>
+                <span class="ci-label">Estado</span>
+                <span class="ci-value" style="color:var(--accent-green)">Disponible ahora</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.23 0z"/></svg>
+            </a>
+            <a href="mailto:juanpablo@example.com" class="social-link" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper reveal-up delay-2">
+          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre completo" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Asunto</label>
+              <input type="text" id="subject" name="subject" placeholder="¿De qué se trata?" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              <span id="btnText">Enviar mensaje</span>
+              <span id="btnArrow">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>JPO<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-tagline">Diseñado & Desarrollado con ❤️ por Juan Pablo Oviedo</p>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Juan Pablo Oviedo Herrera. Todos los derechos reservados.</span>
+        <span class="footer-made">Made in Colombia 🇨🇴</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
