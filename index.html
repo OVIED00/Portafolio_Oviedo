@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juan Pablo Oviedo — Dev & Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Fira+Code:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
   <!-- Lucide Icons via CDN -->
@@ -20,6 +23,7 @@
       justify-content: center;
       flex-shrink: 0;
     }
+
     .icon svg {
       width: 1em;
       height: 1em;
@@ -30,22 +34,48 @@
       stroke-linejoin: round;
       display: block;
     }
+
     /* Size variants */
-    .icon-xs  { font-size: 0.85rem; }
-    .icon-sm  { font-size: 1rem;    }
-    .icon-md  { font-size: 1.25rem; }
-    .icon-lg  { font-size: 1.5rem;  }
-    .icon-xl  { font-size: 1.8rem;  }
-    .icon-2xl { font-size: 2.2rem;  }
+    .icon-xs {
+      font-size: 0.85rem;
+    }
+
+    .icon-sm {
+      font-size: 1rem;
+    }
+
+    .icon-md {
+      font-size: 1.25rem;
+    }
+
+    .icon-lg {
+      font-size: 1.5rem;
+    }
+
+    .icon-xl {
+      font-size: 1.8rem;
+    }
+
+    .icon-2xl {
+      font-size: 2.2rem;
+    }
 
     /* Nav tag dot uses the pulsing CSS dot — keep it */
 
     /* Badge icons */
-    .badge .icon { font-size: 1rem; }
+    .badge .icon {
+      font-size: 1rem;
+    }
 
     /* Hero cube faces — replace emoji text with icon */
-    .cube-face { font-size: 1.4rem; }
-    .cube-face .icon svg { stroke: var(--accent); }
+    .cube-face {
+      font-size: 1.4rem;
+    }
+
+    .cube-face .icon svg {
+      stroke: var(--accent);
+    }
+
     .cube-face .cube-label {
       font-family: var(--font-code);
       font-size: 1rem;
@@ -54,70 +84,141 @@
     }
 
     /* Skill cat icon */
-    .skill-cat-icon .icon { font-size: 1.4rem; color: var(--accent); }
+    .skill-cat-icon .icon {
+      font-size: 1.4rem;
+      color: var(--accent);
+    }
 
     /* Orb inner */
-    .orb-inner .icon { font-size: 1.6rem; color: var(--accent); }
+    .orb-inner .icon {
+      font-size: 1.6rem;
+      color: var(--accent);
+    }
 
     /* Service icon */
-    .icon-3d .icon { font-size: 1.6rem; color: var(--accent); }
+    .icon-3d .icon {
+      font-size: 1.6rem;
+      color: var(--accent);
+    }
 
     /* Contact info icon */
-    .ci-icon .icon { font-size: 1rem; }
+    .ci-icon .icon {
+      font-size: 1rem;
+    }
 
     /* Footer social */
-    .social-link .icon { font-size: 1.1rem; }
+    .social-link .icon {
+      font-size: 1.1rem;
+    }
 
     /* fun-nav-item icons */
-    .fun-nav-item .icon { font-size: 0.85rem; flex-shrink: 0; }
+    .fun-nav-item .icon {
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
 
     /* fun-kpi-icon */
-    .fun-kpi-icon .icon { font-size: 1rem; color: var(--text-muted); }
-    .k1 .fun-kpi-icon .icon { color: #b57cff; }
-    .k2 .fun-kpi-icon .icon { color: #4ea8ff; }
-    .k3 .fun-kpi-icon .icon { color: var(--accent); }
-    .k4 .fun-kpi-icon .icon { color: #ffa03c; }
+    .fun-kpi-icon .icon {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .k1 .fun-kpi-icon .icon {
+      color: #b57cff;
+    }
+
+    .k2 .fun-kpi-icon .icon {
+      color: #4ea8ff;
+    }
+
+    .k3 .fun-kpi-icon .icon {
+      color: var(--accent);
+    }
+
+    .k4 .fun-kpi-icon .icon {
+      color: #ffa03c;
+    }
 
     /* fun-feat */
-    .fun-feat .icon { font-size: 0.9rem; color: #b57cff; }
+    .fun-feat .icon {
+      font-size: 0.9rem;
+      color: #b57cff;
+    }
 
     /* GPS badge */
-    .gps-api-badge .icon { font-size: 0.75rem; vertical-align: middle; margin-right: 2px; }
+    .gps-api-badge .icon {
+      font-size: 0.75rem;
+      vertical-align: middle;
+      margin-right: 2px;
+    }
 
     /* Pay stepper */
-    .ps-circle .icon { font-size: 0.95rem; }
+    .ps-circle .icon {
+      font-size: 0.95rem;
+    }
 
     /* Wompi badge */
-    .wompi-badge .icon { font-size: 0.85rem; }
+    .wompi-badge .icon {
+      font-size: 0.85rem;
+    }
 
     /* fun-module-pill */
-    .fun-module-pill .icon { font-size: 0.7rem; vertical-align: middle; margin-right: 2px; }
+    .fun-module-pill .icon {
+      font-size: 0.7rem;
+      vertical-align: middle;
+      margin-right: 2px;
+    }
 
     /* company badge icon */
-    .fun-company-badge .icon { font-size: 0.85rem; }
+    .fun-company-badge .icon {
+      font-size: 0.85rem;
+    }
 
     /* project-badge-grad icon */
-    .project-badge-grad .icon { font-size: 0.85rem; }
+    .project-badge-grad .icon {
+      font-size: 0.85rem;
+    }
 
     /* footer tagline icon (heart) */
-    .footer-tagline .icon { font-size: 0.9rem; color: #ff6b9d; vertical-align: middle; }
+    .footer-tagline .icon {
+      font-size: 0.9rem;
+      color: #ff6b9d;
+      vertical-align: middle;
+    }
 
     /* service-badge icon */
-    .service-badge .icon { font-size: 0.75rem; vertical-align: middle; }
+    .service-badge .icon {
+      font-size: 0.75rem;
+      vertical-align: middle;
+    }
 
     /* hero-tag status dot stays as CSS dot */
 
     /* Link buttons */
-    .link-btn .icon { font-size: 0.85rem; transition: transform 0.2s; }
-    .link-btn:hover .icon { transform: translate(3px, -3px); }
+    .link-btn .icon {
+      font-size: 0.85rem;
+      transition: transform 0.2s;
+    }
+
+    .link-btn:hover .icon {
+      transform: translate(3px, -3px);
+    }
 
     /* nav-cta */
-    .nav-cta .icon { font-size: 0.85rem; margin-left: 4px; vertical-align: middle; }
+    .nav-cta .icon {
+      font-size: 0.85rem;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
 
     /* Scroll indicator */
-    .hero-scroll-indicator .icon { font-size: 0.8rem; color: var(--accent); }
+    .hero-scroll-indicator .icon {
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Custom cursor -->
@@ -176,7 +277,7 @@
       </div>
 
       <p class="hero-desc reveal-up delay-4">
-        Tecnólogo en Desarrollo de Software · Técnico en Diseño Gráfico · 20 años<br/>
+        Tecnólogo en Desarrollo de Software · Técnico en Diseño Gráfico · 20 años<br />
         Construyo interfaces que <em>se sienten</em> tan bien como se ven.
       </p>
 
@@ -216,7 +317,7 @@
       <span>UI Design</span><span>·</span>
       <span>Bootstrap</span><span>·</span>
       <span>SQL</span><span>·</span>
-      
+
       <span>Scrum</span><span>·</span>
       <span>React</span><span>·</span>
       <span>TypeScript</span><span>·</span>
@@ -226,7 +327,7 @@
       <span>UI Design</span><span>·</span>
       <span>Bootstrap</span><span>·</span>
       <span>SQL</span><span>·</span>
-      
+
       <span>Scrum</span><span>·</span>
     </div>
   </div>
@@ -242,9 +343,13 @@
 
       <div class="about-grid">
         <div class="about-text reveal-up delay-1">
-          <h2 class="section-title">Donde el código<br/><span class="accent">se encuentra</span><br/>con el diseño</h2>
-          <p>Soy Juan Pablo Oviedo, desarrollador frontend y diseñador gráfico con sede en Colombia. Con 20 años y una base doble — tecnología <em>y</em> diseño — construyo productos digitales que no solo funcionan perfectamente, sino que también se ven excepcionales.</p>
-          <p>Mi enfoque une la lógica del código con la intuición del diseño. Cada botón, cada transición, cada micro-interacción es una decisión consciente orientada al usuario.</p>
+          <h2 class="section-title">Donde el código<br /><span class="accent">se encuentra</span><br />con el diseño
+          </h2>
+          <p>Soy Juan Pablo Oviedo, desarrollador frontend y diseñador gráfico con sede en Colombia. Con 20 años y una
+            base doble — tecnología <em>y</em> diseño — construyo productos digitales que no solo funcionan
+            perfectamente, sino que también se ven excepcionales.</p>
+          <p>Mi enfoque une la lógica del código con la intuición del diseño. Cada botón, cada transición, cada
+            micro-interacción es una decisión consciente orientada al usuario.</p>
 
           <div class="about-stats">
             <div class="stat-card">
@@ -252,12 +357,12 @@
               <span class="stat-label">Años</span>
             </div>
             <div class="stat-card">
-              <span class="stat-num">2+</span>
+              <span class="stat-num">1+</span>
               <span class="stat-label">Años exp.</span>
             </div>
             <div class="stat-card">
               <span class="stat-num">∞</span>
-              <span class="stat-label">Café</span>
+              <span class="stat-label">Ideas</span>
             </div>
           </div>
         </div>
@@ -279,7 +384,7 @@
                   <span>React</span>
                   <span>Angular</span>
                   <span>TypeScript</span>
-                 
+
                 </div>
               </div>
               <div class="card-glow"></div>
@@ -311,7 +416,7 @@
         <span>Habilidades</span>
       </div>
 
-      <h2 class="section-title reveal-up delay-1">Stack tecnológico<br/><span class="accent">& competencias</span></h2>
+      <h2 class="section-title reveal-up delay-1">Stack tecnológico<br /><span class="accent">& competencias</span></h2>
 
       <div class="skills-grid">
 
@@ -323,23 +428,33 @@
           <div class="skill-items">
             <div class="skill-item" data-level="90">
               <div class="skill-info"><span>React</span><span class="skill-pct">90%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:90%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:90%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="85">
               <div class="skill-info"><span>Angular</span><span class="skill-pct">85%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:85%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:85%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="92">
               <div class="skill-info"><span>JavaScript / TypeScript</span><span class="skill-pct">92%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:92%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:92%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="95">
               <div class="skill-info"><span>HTML5 / CSS3</span><span class="skill-pct">95%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:95%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:95%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="88">
               <div class="skill-info"><span>Bootstrap / Responsive</span><span class="skill-pct">88%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:88%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:88%"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -352,19 +467,27 @@
           <div class="skill-items">
             <div class="skill-item" data-level="95">
               <div class="skill-info"><span>UX/UI Design</span><span class="skill-pct">95%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:95%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:95%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="92">
               <div class="skill-info"><span>Diseño Gráfico</span><span class="skill-pct">92%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:92%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:92%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="85">
               <div class="skill-info"><span>Prototipado</span><span class="skill-pct">85%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:85%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:85%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="80">
               <div class="skill-info"><span>Adobe Suite</span><span class="skill-pct">80%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:80%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:80%"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -377,19 +500,27 @@
           <div class="skill-items">
             <div class="skill-item" data-level="70">
               <div class="skill-info"><span>Node.js</span><span class="skill-pct">70%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:70%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:70%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="65">
               <div class="skill-info"><span>SQL</span><span class="skill-pct">65%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:65%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:65%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="88">
               <div class="skill-info"><span>REST APIs</span><span class="skill-pct">88%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:88%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:88%"></div>
+              </div>
             </div>
             <div class="skill-item" data-level="82">
               <div class="skill-info"><span>Scrum / Agile</span><span class="skill-pct">82%</span></div>
-              <div class="skill-bar"><div class="skill-fill" style="--target:82%"></div></div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--target:82%"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -414,7 +545,7 @@
           <div class="orb-inner"><span class="icon icon-xl"><i data-lucide="server"></i></span></div>
           <span>Node.js</span>
         </div>
-       
+
         <div class="tech-orb" data-tech="Bootstrap">
           <div class="orb-inner"><span class="icon icon-xl"><i data-lucide="layout-template"></i></span></div>
           <span>Bootstrap</span>
@@ -440,7 +571,7 @@
         <span>Qué ofrezco</span>
       </div>
 
-      <h2 class="section-title reveal-up delay-1">Servicios &<br/><span class="accent">capacidades</span></h2>
+      <h2 class="section-title reveal-up delay-1">Servicios &<br /><span class="accent">capacidades</span></h2>
 
       <div class="services-grid">
 
@@ -451,7 +582,8 @@
             </div>
           </div>
           <h3>UI/UX Design</h3>
-          <p>Diseño de interfaces centradas en el usuario. Wireframes, prototipos interactivos y sistemas de diseño coherentes que convierten visitas en clientes.</p>
+          <p>Diseño de interfaces centradas en el usuario. Wireframes, prototipos interactivos y sistemas de diseño
+            coherentes que convierten visitas en clientes.</p>
           <div class="service-tags">
             <span>Prototipado</span><span>Design System</span>
           </div>
@@ -468,7 +600,8 @@
             </div>
           </div>
           <h3>Frontend Development</h3>
-          <p>Implementación de interfaces responsivas con React y Angular. Componentes reutilizables, integración con APIs REST y optimización de rendimiento en múltiples dispositivos.</p>
+          <p>Implementación de interfaces responsivas con React y Angular. Componentes reutilizables, integración con
+            APIs REST y optimización de rendimiento en múltiples dispositivos.</p>
           <div class="service-tags">
             <span>React</span><span>Angular</span><span>TypeScript</span><span>Bootstrap</span>
           </div>
@@ -482,7 +615,8 @@
             </div>
           </div>
           <h3>Diseño Gráfico</h3>
-          <p>Identidad visual, branding y materiales gráficos digitales. Combinando creatividad artística con principios de comunicación visual efectiva.</p>
+          <p>Identidad visual, branding y materiales gráficos digitales. Combinando creatividad artística con principios
+            de comunicación visual efectiva.</p>
           <div class="service-tags">
             <span>Branding</span><span>Adobe</span><span>Identidad</span>
           </div>
@@ -496,7 +630,8 @@
             </div>
           </div>
           <h3>Integración de APIs</h3>
-          <p>Consumo e integración de APIs REST para aplicaciones dinámicas. Manejo de estados, autenticación y gestión eficiente de datos en tiempo real.</p>
+          <p>Consumo e integración de APIs REST para aplicaciones dinámicas. Manejo de estados, autenticación y gestión
+            eficiente de datos en tiempo real.</p>
           <div class="service-tags">
             <span>REST APIs</span><span>Node.js</span><span>Fetch/Axios</span>
           </div>
@@ -516,7 +651,7 @@
         <span>Proyectos</span>
       </div>
 
-      <h2 class="section-title reveal-up delay-1">Trabajo<br/><span class="accent">destacado</span></h2>
+      <h2 class="section-title reveal-up delay-1">Trabajo<br /><span class="accent">destacado</span></h2>
 
       <div class="projects-grid">
 
@@ -527,7 +662,9 @@
 
               <div class="fun-topbar">
                 <span class="fun-logo">
-                  <span class="icon icon-xs" style="display:inline-flex;vertical-align:middle;margin-right:4px;color:#b57cff"><i data-lucide="cross"></i></span>
+                  <span class="icon icon-xs"
+                    style="display:inline-flex;vertical-align:middle;margin-right:4px;color:#b57cff"><i
+                      data-lucide="cross"></i></span>
                   Sistema Administrativo · Funeraria
                 </span>
                 <div class="fun-topbar-dots">
@@ -631,12 +768,18 @@
                   </div>
 
                   <div class="fun-modules">
-                    <div class="fun-module-pill"><span class="icon"><i data-lucide="heart-handshake"></i></span> Serv. fúnebres</div>
-                    <div class="fun-module-pill"><span class="icon"><i data-lucide="phone-call"></i></span> Call Center</div>
-                    <div class="fun-module-pill"><span class="icon"><i data-lucide="credit-card"></i></span> Pagos Wompi</div>
-                    <div class="fun-module-pill"><span class="icon"><i data-lucide="shield"></i></span> Roles & Permisos</div>
-                    <div class="fun-module-pill"><span class="icon"><i data-lucide="file-text"></i></span> Contratos</div>
-                    <div class="fun-module-pill"><span class="icon"><i data-lucide="bar-chart-2"></i></span> Reportería</div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="heart-handshake"></i></span> Serv.
+                      fúnebres</div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="phone-call"></i></span> Call Center
+                    </div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="credit-card"></i></span> Pagos Wompi
+                    </div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="shield"></i></span> Roles & Permisos
+                    </div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="file-text"></i></span> Contratos
+                    </div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="bar-chart-2"></i></span> Reportería
+                    </div>
                     <div class="fun-module-pill"><span class="icon"><i data-lucide="mail"></i></span> PQRS</div>
                   </div>
                 </div>
@@ -656,22 +799,28 @@
             <p>
               Plataforma empresarial de gran escala para la gestión completa de una funeraria.
               Desde la apertura de un servicio fúnebre hasta el cierre contable, todo centralizado en un solo sistema:
-              <strong>módulo de servicios fúnebres, call center, pasarela de pagos (Wompi), control de permisos por roles,
-              gestión de contratos, generación de reportes y documentos, y sistema PQRS</strong>.
+              <strong>módulo de servicios fúnebres, call center, pasarela de pagos (Wompi), control de permisos por
+                roles,
+                gestión de contratos, generación de reportes y documentos, y sistema PQRS</strong>.
               Trabajo colaborativo bajo metodología ágil Scrum.
             </p>
             <div class="fun-features">
-              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="heart-handshake"></i></span> Servicios fúnebres</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="heart-handshake"></i></span> Servicios
+                fúnebres</div>
               <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="phone-call"></i></span> Call Center</div>
-              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="credit-card"></i></span> Pagos en línea</div>
-              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="shield"></i></span> Permisos & Roles</div>
-              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="file-text"></i></span> Gestión de contratos</div>
-              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="bar-chart-2"></i></span> Reportería & Docs</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="credit-card"></i></span> Pagos en línea
+              </div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="shield"></i></span> Permisos & Roles
+              </div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="file-text"></i></span> Gestión de
+                contratos</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="bar-chart-2"></i></span> Reportería &
+                Docs</div>
               <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="mail"></i></span> PQRS</div>
             </div>
-            <div class="project-links">
+            <!-- <div class="project-links">
               <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -684,7 +833,8 @@
                   <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
                   <div class="url-bar">cursosapp.com</div>
                   <span class="cv-grad-badge">
-                    <span class="icon icon-xs" style="display:inline-flex;vertical-align:middle;margin-right:2px"><i data-lucide="graduation-cap"></i></span>
+                    <span class="icon icon-xs" style="display:inline-flex;vertical-align:middle;margin-right:2px"><i
+                        data-lucide="graduation-cap"></i></span>
                     Proyecto de Grado
                   </span>
                 </div>
@@ -730,10 +880,12 @@
               <span>React</span><span>JavaScript</span><span>Node.js</span><span>SQL</span>
             </div>
             <h3>Plataforma de Venta de Cursos Virtuales</h3>
-            <p>Aplicación full-stack para la comercialización de cursos en línea. Incluye catálogo de cursos, sistema de autenticación, carrito de compras, gestión de usuarios y panel administrativo. Backend con Node.js y base de datos SQL; frontend moderno en React.</p>
-            <div class="project-links">
+            <p>Aplicación full-stack para la comercialización de cursos en línea. Incluye catálogo de cursos, sistema de
+              autenticación, carrito de compras, gestión de usuarios y panel administrativo. Backend con Node.js y base
+              de datos SQL; frontend moderno en React.</p>
+            <!-- <div class="project-links">
               <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -766,10 +918,11 @@
               <span>Angular</span><span>TypeScript</span><span>REST API</span><span>SQL</span>
             </div>
             <h3>Dashboard de Estadísticas Analíticas</h3>
-            <p>Panel de control con visualización de métricas en tiempo real. Gráficas interactivas, KPIs dinámicos y componentes reutilizables conectados a APIs REST con Angular.</p>
-            <div class="project-links">
+            <p>Panel de control con visualización de métricas en tiempo real. Gráficas interactivas, KPIs dinámicos y
+              componentes reutilizables conectados a APIs REST con Angular.</p>
+            <!-- <div class="project-links">
               <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -807,16 +960,27 @@
               </div>
               <div class="gps-sidebar-overlay">
                 <div class="gps-title-bar">
-                  <span class="icon icon-xs" style="display:inline-flex;vertical-align:middle;margin-right:3px"><i data-lucide="map-pin"></i></span>
+                  <span class="icon icon-xs" style="display:inline-flex;vertical-align:middle;margin-right:3px"><i
+                      data-lucide="map-pin"></i></span>
                   Dispositivos (29/29)
                 </div>
-                <div class="gps-device-row"><span class="gps-dot-green"></span><div class="gps-device-line"></div></div>
-                <div class="gps-device-row"><span class="gps-dot-green"></span><div class="gps-device-line short"></div></div>
-                <div class="gps-device-row"><span class="gps-dot-red"></span><div class="gps-device-line"></div></div>
-                <div class="gps-device-row"><span class="gps-dot-green"></span><div class="gps-device-line short"></div></div>
+                <div class="gps-device-row"><span class="gps-dot-green"></span>
+                  <div class="gps-device-line"></div>
+                </div>
+                <div class="gps-device-row"><span class="gps-dot-green"></span>
+                  <div class="gps-device-line short"></div>
+                </div>
+                <div class="gps-device-row"><span class="gps-dot-red"></span>
+                  <div class="gps-device-line"></div>
+                </div>
+                <div class="gps-device-row"><span class="gps-dot-green"></span>
+                  <div class="gps-device-line short"></div>
+                </div>
               </div>
               <div class="gps-api-badge">
-                <span class="icon" style="display:inline-flex;vertical-align:middle;font-size:0.65rem;margin-right:3px"><i data-lucide="map"></i></span>
+                <span class="icon"
+                  style="display:inline-flex;vertical-align:middle;font-size:0.65rem;margin-right:3px"><i
+                    data-lucide="map"></i></span>
                 Google Maps API
               </div>
             </div>
@@ -826,10 +990,8 @@
               <span>Google Maps API</span><span>SQL</span><span>Tailwind CSS</span>
             </div>
             <h3>Sistema de Rastreo GPS</h3>
-            <p>Plataforma de monitoreo GPS en tiempo real para flotas de dispositivos. Integración con Google Maps API, estado online/offline, nivel de batería y señal 4G por dispositivo.</p>
-            <div class="project-links">
-              <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
-            </div>
+            <p>Plataforma de monitoreo GPS en tiempo real para flotas de dispositivos. Integración con Google Maps API,
+              estado online/offline, nivel de batería y señal 4G por dispositivo.</p>
           </div>
         </div>
 
@@ -872,7 +1034,8 @@
                   <span>Ej: 1234567890</span>
                 </div>
                 <div class="pcm-btn">
-                  <span class="icon icon-xs" style="display:inline-flex"><i data-lucide="search"></i></span> Buscar Contratos
+                  <span class="icon icon-xs" style="display:inline-flex"><i data-lucide="search"></i></span> Buscar
+                  Contratos
                 </div>
               </div>
               <div class="wompi-badge">
@@ -885,10 +1048,11 @@
               <span>Wompi</span><span>Tailwind CSS</span><span>REST API</span>
             </div>
             <h3>Pasarela de Pagos en Línea</h3>
-            <p>Módulo de pagos en línea integrado con Wompi. Flujo paso a paso (cédula → contrato → pago → comprobante), validaciones en tiempo real y diseño responsive adaptado a diferentes dispositivos.</p>
-            <div class="project-links">
+            <p>Módulo de pagos en línea integrado con Wompi. Flujo paso a paso (cédula → contrato → pago → comprobante),
+              validaciones en tiempo real y diseño responsive adaptado a diferentes dispositivos.</p>
+            <!-- <div class="project-links">
               <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -907,7 +1071,7 @@
 
       <div class="contact-grid">
         <div class="contact-text reveal-up delay-1">
-          <h2 class="section-title">¿Tienes un<br/><span class="accent">proyecto</span><br/>en mente?</h2>
+          <h2 class="section-title">¿Tienes un<br /><span class="accent">proyecto</span><br />en mente?</h2>
           <p>Estoy siempre abierto a nuevos proyectos, colaboraciones y oportunidades. No dudes en escribirme.</p>
 
           <div class="contact-info-items">
@@ -929,25 +1093,22 @@
                 <span class="ci-value">Tecnólogo en Des. de Software · Técnico en Diseño Gráfico</span>
               </div>
             </div>
-            <div class="contact-info-item">
-              <div class="ci-icon">
-                <span class="icon icon-md"><i data-lucide="zap"></i></span>
-              </div>
-              <div>
-                <span class="ci-label">Estado</span>
-                <span class="ci-value" style="color:var(--accent-green)">Disponible ahora</span>
-              </div>
-            </div>
           </div>
 
           <div class="social-links">
-            <a href="#" class="social-link" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            <a href="https://github.com/OVIED00" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
             </a>
-            <a href="#" class="social-link" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.23 0z"/></svg>
+            <a href="https://linkedin.com/in/juan-pablo-oviedo-herrera-919baa402" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.23 0z" />
+              </svg>
             </a>
-            <a href="mailto:juanpablo@example.com" class="social-link" aria-label="Email">
+            <a href="mailto:oviedoherrerajuanpablo@gmail.com" class="social-link" aria-label="Email">
               <span class="icon icon-md"><i data-lucide="mail"></i></span>
             </a>
           </div>
@@ -969,7 +1130,8 @@
             </div>
             <div class="form-group">
               <label for="message">Mensaje</label>
-              <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..."
+                required></textarea>
             </div>
             <button type="submit" class="btn-primary btn-full">
               <span id="btnText">Enviar mensaje</span>
@@ -989,17 +1151,11 @@
           <span class="logo-bracket">&lt;</span>JPO<span class="logo-bracket">/&gt;</span>
         </div>
         <p class="footer-tagline">
-          Diseñado & Desarrollado con
-          <span class="icon" style="display:inline-flex;vertical-align:middle;font-size:0.9rem;color:#ff6b9d"><i data-lucide="heart"></i></span>
-          por Juan Pablo Oviedo
+          Diseñado & Desarrollado por Juan Pablo Oviedo
         </p>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Juan Pablo Oviedo Herrera. Todos los derechos reservados.</span>
-        <span class="footer-made">
-          Made in Colombia
-          <span class="icon" style="display:inline-flex;vertical-align:middle;font-size:0.85rem;margin-left:4px"><i data-lucide="flag"></i></span>
-        </span>
+        <span>© <span id="year"></span> Juan Pablo Oviedo Herrera. Todos los derechos reservados.</span>
       </div>
     </div>
   </footer>
@@ -1012,4 +1168,5 @@
     });
   </script>
 </body>
+
 </html>
