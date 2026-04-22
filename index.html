@@ -8,6 +8,115 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <style>
+    /* ── LUCIDE ICON HELPERS ── */
+    .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .icon svg {
+      width: 1em;
+      height: 1em;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      display: block;
+    }
+    /* Size variants */
+    .icon-xs  { font-size: 0.85rem; }
+    .icon-sm  { font-size: 1rem;    }
+    .icon-md  { font-size: 1.25rem; }
+    .icon-lg  { font-size: 1.5rem;  }
+    .icon-xl  { font-size: 1.8rem;  }
+    .icon-2xl { font-size: 2.2rem;  }
+
+    /* Nav tag dot uses the pulsing CSS dot — keep it */
+
+    /* Badge icons */
+    .badge .icon { font-size: 1rem; }
+
+    /* Hero cube faces — replace emoji text with icon */
+    .cube-face { font-size: 1.4rem; }
+    .cube-face .icon svg { stroke: var(--accent); }
+    .cube-face .cube-label {
+      font-family: var(--font-code);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* Skill cat icon */
+    .skill-cat-icon .icon { font-size: 1.4rem; color: var(--accent); }
+
+    /* Orb inner */
+    .orb-inner .icon { font-size: 1.6rem; color: var(--accent); }
+
+    /* Service icon */
+    .icon-3d .icon { font-size: 1.6rem; color: var(--accent); }
+
+    /* Contact info icon */
+    .ci-icon .icon { font-size: 1rem; }
+
+    /* Footer social */
+    .social-link .icon { font-size: 1.1rem; }
+
+    /* fun-nav-item icons */
+    .fun-nav-item .icon { font-size: 0.85rem; flex-shrink: 0; }
+
+    /* fun-kpi-icon */
+    .fun-kpi-icon .icon { font-size: 1rem; color: var(--text-muted); }
+    .k1 .fun-kpi-icon .icon { color: #b57cff; }
+    .k2 .fun-kpi-icon .icon { color: #4ea8ff; }
+    .k3 .fun-kpi-icon .icon { color: var(--accent); }
+    .k4 .fun-kpi-icon .icon { color: #ffa03c; }
+
+    /* fun-feat */
+    .fun-feat .icon { font-size: 0.9rem; color: #b57cff; }
+
+    /* GPS badge */
+    .gps-api-badge .icon { font-size: 0.75rem; vertical-align: middle; margin-right: 2px; }
+
+    /* Pay stepper */
+    .ps-circle .icon { font-size: 0.95rem; }
+
+    /* Wompi badge */
+    .wompi-badge .icon { font-size: 0.85rem; }
+
+    /* fun-module-pill */
+    .fun-module-pill .icon { font-size: 0.7rem; vertical-align: middle; margin-right: 2px; }
+
+    /* company badge icon */
+    .fun-company-badge .icon { font-size: 0.85rem; }
+
+    /* project-badge-grad icon */
+    .project-badge-grad .icon { font-size: 0.85rem; }
+
+    /* footer tagline icon (heart) */
+    .footer-tagline .icon { font-size: 0.9rem; color: #ff6b9d; vertical-align: middle; }
+
+    /* service-badge icon */
+    .service-badge .icon { font-size: 0.75rem; vertical-align: middle; }
+
+    /* hero-tag status dot stays as CSS dot */
+
+    /* Link buttons */
+    .link-btn .icon { font-size: 0.85rem; transition: transform 0.2s; }
+    .link-btn:hover .icon { transform: translate(3px, -3px); }
+
+    /* nav-cta */
+    .nav-cta .icon { font-size: 0.85rem; margin-left: 4px; vertical-align: middle; }
+
+    /* Scroll indicator */
+    .hero-scroll-indicator .icon { font-size: 0.8rem; color: var(--accent); }
+  </style>
 </head>
 <body>
 
@@ -80,12 +189,12 @@
     <div class="hero-3d-container">
       <div class="cube-scene">
         <div class="cube">
-          <div class="cube-face front"><span>&lt;/&gt;</span></div>
-          <div class="cube-face back"><span>UI</span></div>
-          <div class="cube-face right"><span>UX</span></div>
-          <div class="cube-face left"><span>RX</span></div>
-          <div class="cube-face top"><span>JS</span></div>
-          <div class="cube-face bottom"><span>CSS</span></div>
+          <div class="cube-face front"><span class="cube-label">&lt;/&gt;</span></div>
+          <div class="cube-face back"><span class="cube-label">UI</span></div>
+          <div class="cube-face right"><span class="cube-label">UX</span></div>
+          <div class="cube-face left"><span class="cube-label">RX</span></div>
+          <div class="cube-face top"><span class="cube-label">JS</span></div>
+          <div class="cube-face bottom"><span class="cube-label">CSS</span></div>
         </div>
       </div>
     </div>
@@ -107,7 +216,7 @@
       <span>UI Design</span><span>·</span>
       <span>Bootstrap</span><span>·</span>
       <span>SQL</span><span>·</span>
-      <span>Figma</span><span>·</span>
+      
       <span>Scrum</span><span>·</span>
       <span>React</span><span>·</span>
       <span>TypeScript</span><span>·</span>
@@ -117,7 +226,7 @@
       <span>UI Design</span><span>·</span>
       <span>Bootstrap</span><span>·</span>
       <span>SQL</span><span>·</span>
-      <span>Figma</span><span>·</span>
+      
       <span>Scrum</span><span>·</span>
     </div>
   </div>
@@ -170,7 +279,7 @@
                   <span>React</span>
                   <span>Angular</span>
                   <span>TypeScript</span>
-                  <span>Figma</span>
+                 
                 </div>
               </div>
               <div class="card-glow"></div>
@@ -179,13 +288,13 @@
 
           <div class="floating-badges">
             <div class="badge badge-1 float-anim">
-              <span>🎨</span> Diseño Gráfico
+              <span class="icon icon-sm"><i data-lucide="pen-tool"></i></span> Diseño Gráfico
             </div>
             <div class="badge badge-2 float-anim delay-float">
-              <span>⚡</span> Angular
+              <span class="icon icon-sm"><i data-lucide="zap"></i></span> Angular
             </div>
             <div class="badge badge-3 float-anim delay-float-2">
-              <span>🔗</span> REST APIs
+              <span class="icon icon-sm"><i data-lucide="link"></i></span> REST APIs
             </div>
           </div>
         </div>
@@ -208,7 +317,7 @@
 
         <div class="skill-category reveal-up delay-1">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">🖥️</div>
+            <div class="skill-cat-icon"><span class="icon icon-lg"><i data-lucide="monitor"></i></span></div>
             <h3>Frontend</h3>
           </div>
           <div class="skill-items">
@@ -237,7 +346,7 @@
 
         <div class="skill-category reveal-up delay-2">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">🎨</div>
+            <div class="skill-cat-icon"><span class="icon icon-lg"><i data-lucide="pen-tool"></i></span></div>
             <h3>Diseño</h3>
           </div>
           <div class="skill-items">
@@ -250,7 +359,7 @@
               <div class="skill-bar"><div class="skill-fill" style="--target:92%"></div></div>
             </div>
             <div class="skill-item" data-level="85">
-              <div class="skill-info"><span>Figma / Prototipado</span><span class="skill-pct">85%</span></div>
+              <div class="skill-info"><span>Prototipado</span><span class="skill-pct">85%</span></div>
               <div class="skill-bar"><div class="skill-fill" style="--target:85%"></div></div>
             </div>
             <div class="skill-item" data-level="80">
@@ -262,7 +371,7 @@
 
         <div class="skill-category reveal-up delay-3">
           <div class="skill-cat-header">
-            <div class="skill-cat-icon">⚙️</div>
+            <div class="skill-cat-icon"><span class="icon icon-lg"><i data-lucide="settings-2"></i></span></div>
             <h3>Backend & Otros</h3>
           </div>
           <div class="skill-items">
@@ -290,35 +399,32 @@
       <!-- Tech Orbs -->
       <div class="tech-orbs reveal-up delay-4">
         <div class="tech-orb" data-tech="React">
-          <div class="orb-inner">⚛️</div>
+          <div class="orb-inner"><span class="icon icon-xl"><i data-lucide="atom"></i></span></div>
           <span>React</span>
         </div>
         <div class="tech-orb" data-tech="Angular">
-          <div class="orb-inner">🅰️</div>
+          <div class="orb-inner"><span class="icon icon-xl"><i data-lucide="triangle"></i></span></div>
           <span>Angular</span>
         </div>
         <div class="tech-orb" data-tech="TypeScript">
-          <div class="orb-inner">🔷</div>
+          <div class="orb-inner"><span class="icon icon-xl"><i data-lucide="braces"></i></span></div>
           <span>TypeScript</span>
         </div>
         <div class="tech-orb" data-tech="Node.js">
-          <div class="orb-inner">🟩</div>
+          <div class="orb-inner"><span class="icon icon-xl"><i data-lucide="server"></i></span></div>
           <span>Node.js</span>
         </div>
-        <div class="tech-orb" data-tech="Figma">
-          <div class="orb-inner">🎨</div>
-          <span>Figma</span>
-        </div>
+       
         <div class="tech-orb" data-tech="Bootstrap">
-          <div class="orb-inner">🅱️</div>
+          <div class="orb-inner"><span class="icon icon-xl"><i data-lucide="layout-template"></i></span></div>
           <span>Bootstrap</span>
         </div>
         <div class="tech-orb" data-tech="SQL">
-          <div class="orb-inner">🗄️</div>
+          <div class="orb-inner"><span class="icon icon-xl"><i data-lucide="database"></i></span></div>
           <span>SQL</span>
         </div>
         <div class="tech-orb" data-tech="CSS3">
-          <div class="orb-inner">🎨</div>
+          <div class="orb-inner"><span class="icon icon-xl"><i data-lucide="paintbrush"></i></span></div>
           <span>CSS3</span>
         </div>
       </div>
@@ -341,22 +447,24 @@
         <div class="service-card reveal-up delay-1">
           <div class="service-icon">
             <div class="icon-3d">
-              <span>🖼️</span>
+              <span class="icon icon-xl"><i data-lucide="layout-dashboard"></i></span>
             </div>
           </div>
           <h3>UI/UX Design</h3>
           <p>Diseño de interfaces centradas en el usuario. Wireframes, prototipos interactivos y sistemas de diseño coherentes que convierten visitas en clientes.</p>
           <div class="service-tags">
-            <span>Figma</span><span>Prototipado</span><span>Design System</span>
+            <span>Prototipado</span><span>Design System</span>
           </div>
           <div class="service-line"></div>
         </div>
 
         <div class="service-card featured reveal-up delay-2">
-          <div class="service-badge">⭐ Principal</div>
+          <div class="service-badge">
+            <span class="icon icon-xs"><i data-lucide="star"></i></span> Principal
+          </div>
           <div class="service-icon">
             <div class="icon-3d">
-              <span>💻</span>
+              <span class="icon icon-xl"><i data-lucide="code-2"></i></span>
             </div>
           </div>
           <h3>Frontend Development</h3>
@@ -370,7 +478,7 @@
         <div class="service-card reveal-up delay-3">
           <div class="service-icon">
             <div class="icon-3d">
-              <span>🎨</span>
+              <span class="icon icon-xl"><i data-lucide="palette"></i></span>
             </div>
           </div>
           <h3>Diseño Gráfico</h3>
@@ -384,7 +492,7 @@
         <div class="service-card reveal-up delay-4">
           <div class="service-icon">
             <div class="icon-3d">
-              <span>🔗</span>
+              <span class="icon icon-xl"><i data-lucide="plug-2"></i></span>
             </div>
           </div>
           <h3>Integración de APIs</h3>
@@ -412,59 +520,74 @@
 
       <div class="projects-grid">
 
-        <!-- 0 · SISTEMA ADMINISTRATIVO FUNERARIA (full-width, proyecto empresa) -->
+        <!-- 0 · SISTEMA ADMINISTRATIVO FUNERARIA -->
         <div class="project-card funeraria-card reveal-up delay-1">
           <div class="project-visual vis-funeraria">
             <div class="fun-visual">
 
-              <!-- Top bar -->
               <div class="fun-topbar">
-                <span class="fun-logo">✝ Sistema Administrativo · Funeraria</span>
+                <span class="fun-logo">
+                  <span class="icon icon-xs" style="display:inline-flex;vertical-align:middle;margin-right:4px;color:#b57cff"><i data-lucide="cross"></i></span>
+                  Sistema Administrativo · Funeraria
+                </span>
                 <div class="fun-topbar-dots">
                   <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
                 </div>
               </div>
 
               <div class="fun-body">
-                <!-- Left sidebar navigation -->
                 <div class="fun-sidebar">
-                  <div class="fun-nav-item fn-active"><span>🏠</span><span>Dashboard</span></div>
-                  <div class="fun-nav-item"><span>⚰️</span><span>Servicios</span></div>
-                  <div class="fun-nav-item"><span>📞</span><span>Call Center</span></div>
-                  <div class="fun-nav-item"><span>💳</span><span>Pagos</span></div>
-                  <div class="fun-nav-item"><span>📋</span><span>Contratos</span></div>
-                  <div class="fun-nav-item"><span>📊</span><span>Reportería</span></div>
-                  <div class="fun-nav-item"><span>🔒</span><span>Permisos</span></div>
-                  <div class="fun-nav-item"><span>📬</span><span>PQRS</span></div>
+                  <div class="fun-nav-item fn-active">
+                    <span class="icon"><i data-lucide="layout-dashboard"></i></span><span>Dashboard</span>
+                  </div>
+                  <div class="fun-nav-item">
+                    <span class="icon"><i data-lucide="heart-handshake"></i></span><span>Servicios</span>
+                  </div>
+                  <div class="fun-nav-item">
+                    <span class="icon"><i data-lucide="phone-call"></i></span><span>Call Center</span>
+                  </div>
+                  <div class="fun-nav-item">
+                    <span class="icon"><i data-lucide="credit-card"></i></span><span>Pagos</span>
+                  </div>
+                  <div class="fun-nav-item">
+                    <span class="icon"><i data-lucide="file-text"></i></span><span>Contratos</span>
+                  </div>
+                  <div class="fun-nav-item">
+                    <span class="icon"><i data-lucide="bar-chart-2"></i></span><span>Reportería</span>
+                  </div>
+                  <div class="fun-nav-item">
+                    <span class="icon"><i data-lucide="shield"></i></span><span>Permisos</span>
+                  </div>
+                  <div class="fun-nav-item">
+                    <span class="icon"><i data-lucide="mail"></i></span><span>PQRS</span>
+                  </div>
                 </div>
 
-                <!-- Main content area -->
                 <div class="fun-main">
-                  <!-- KPI row -->
                   <div class="fun-kpi-row">
                     <div class="fun-kpi k1">
-                      <span class="fun-kpi-icon">⚰️</span>
+                      <span class="fun-kpi-icon"><span class="icon"><i data-lucide="heart-handshake"></i></span></span>
                       <div>
                         <div class="fun-kpi-num">248</div>
                         <div class="fun-kpi-label">Servicios activos</div>
                       </div>
                     </div>
                     <div class="fun-kpi k2">
-                      <span class="fun-kpi-icon">📞</span>
+                      <span class="fun-kpi-icon"><span class="icon"><i data-lucide="phone-call"></i></span></span>
                       <div>
                         <div class="fun-kpi-num">1,340</div>
                         <div class="fun-kpi-label">Llamadas mes</div>
                       </div>
                     </div>
                     <div class="fun-kpi k3">
-                      <span class="fun-kpi-icon">💳</span>
+                      <span class="fun-kpi-icon"><span class="icon"><i data-lucide="credit-card"></i></span></span>
                       <div>
                         <div class="fun-kpi-num">$98M</div>
                         <div class="fun-kpi-label">Recaudo</div>
                       </div>
                     </div>
                     <div class="fun-kpi k4">
-                      <span class="fun-kpi-icon">📬</span>
+                      <span class="fun-kpi-icon"><span class="icon"><i data-lucide="mail"></i></span></span>
                       <div>
                         <div class="fun-kpi-num">12</div>
                         <div class="fun-kpi-label">PQRS pendientes</div>
@@ -472,7 +595,6 @@
                     </div>
                   </div>
 
-                  <!-- Middle: chart + table -->
                   <div class="fun-mid">
                     <div class="fun-chart-area">
                       <div class="fun-chart-title">Servicios / Mes</div>
@@ -508,15 +630,14 @@
                     </div>
                   </div>
 
-                  <!-- Module pills at bottom -->
                   <div class="fun-modules">
-                    <div class="fun-module-pill">⚰️ Serv. fúnebres</div>
-                    <div class="fun-module-pill">📞 Call Center</div>
-                    <div class="fun-module-pill">💳 Pagos Wompi</div>
-                    <div class="fun-module-pill">🔒 Roles & Permisos</div>
-                    <div class="fun-module-pill">📋 Contratos</div>
-                    <div class="fun-module-pill">📊 Reportería</div>
-                    <div class="fun-module-pill">📬 PQRS</div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="heart-handshake"></i></span> Serv. fúnebres</div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="phone-call"></i></span> Call Center</div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="credit-card"></i></span> Pagos Wompi</div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="shield"></i></span> Roles & Permisos</div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="file-text"></i></span> Contratos</div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="bar-chart-2"></i></span> Reportería</div>
+                    <div class="fun-module-pill"><span class="icon"><i data-lucide="mail"></i></span> PQRS</div>
                   </div>
                 </div>
               </div>
@@ -524,7 +645,9 @@
           </div>
 
           <div class="project-info fun-info">
-            <div class="fun-company-badge">🏢 Proyecto Empresarial</div>
+            <div class="fun-company-badge">
+              <span class="icon icon-sm"><i data-lucide="building-2"></i></span> Proyecto Empresarial
+            </div>
             <div class="project-tags">
               <span>Angular</span><span>TypeScript</span><span>Node.js</span><span>SQL</span>
               <span>REST API</span><span>Wompi</span><span>Tailwind CSS</span>
@@ -538,30 +661,32 @@
               Trabajo colaborativo bajo metodología ágil Scrum.
             </p>
             <div class="fun-features">
-              <div class="fun-feat"><span>⚰️</span> Servicios fúnebres</div>
-              <div class="fun-feat"><span>📞</span> Call Center</div>
-              <div class="fun-feat"><span>💳</span> Pagos en línea</div>
-              <div class="fun-feat"><span>🔒</span> Permisos & Roles</div>
-              <div class="fun-feat"><span>📋</span> Gestión de contratos</div>
-              <div class="fun-feat"><span>📊</span> Reportería & Docs</div>
-              <div class="fun-feat"><span>📬</span> PQRS</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="heart-handshake"></i></span> Servicios fúnebres</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="phone-call"></i></span> Call Center</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="credit-card"></i></span> Pagos en línea</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="shield"></i></span> Permisos & Roles</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="file-text"></i></span> Gestión de contratos</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="bar-chart-2"></i></span> Reportería & Docs</div>
+              <div class="fun-feat"><span class="icon icon-sm"><i data-lucide="mail"></i></span> PQRS</div>
             </div>
             <div class="project-links">
-              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+              <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
             </div>
           </div>
         </div>
 
-        <!-- 1 · VENTAS DE CURSOS (grande, proyecto de graduación) -->
+        <!-- 1 · VENTAS DE CURSOS -->
         <div class="project-card large reveal-up delay-1">
           <div class="project-visual vis-courses">
             <div class="courses-visual">
-              <!-- Browser frame -->
               <div class="cv-browser">
                 <div class="cv-bar">
                   <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
                   <div class="url-bar">cursosapp.com</div>
-                  <span class="cv-grad-badge">⭐ Proyecto de Grado</span>
+                  <span class="cv-grad-badge">
+                    <span class="icon icon-xs" style="display:inline-flex;vertical-align:middle;margin-right:2px"><i data-lucide="graduation-cap"></i></span>
+                    Proyecto de Grado
+                  </span>
                 </div>
                 <div class="cv-body">
                   <div class="cv-sidebar">
@@ -598,14 +723,16 @@
             </div>
           </div>
           <div class="project-info">
-            <div class="project-badge-grad">🎓 Proyecto de Graduación</div>
+            <div class="project-badge-grad">
+              <span class="icon icon-sm"><i data-lucide="graduation-cap"></i></span> Proyecto de Graduación
+            </div>
             <div class="project-tags">
               <span>React</span><span>JavaScript</span><span>Node.js</span><span>SQL</span>
             </div>
             <h3>Plataforma de Venta de Cursos Virtuales</h3>
             <p>Aplicación full-stack para la comercialización de cursos en línea. Incluye catálogo de cursos, sistema de autenticación, carrito de compras, gestión de usuarios y panel administrativo. Backend con Node.js y base de datos SQL; frontend moderno en React.</p>
             <div class="project-links">
-              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+              <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
             </div>
           </div>
         </div>
@@ -641,7 +768,7 @@
             <h3>Dashboard de Estadísticas Analíticas</h3>
             <p>Panel de control con visualización de métricas en tiempo real. Gráficas interactivas, KPIs dinámicos y componentes reutilizables conectados a APIs REST con Angular.</p>
             <div class="project-links">
-              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+              <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
             </div>
           </div>
         </div>
@@ -650,7 +777,6 @@
         <div class="project-card reveal-up delay-3">
           <div class="project-visual vis-gps">
             <div class="gps-visual">
-              <!-- Map grid background -->
               <div class="gps-map-bg">
                 <div class="gps-road r-h r1"></div>
                 <div class="gps-road r-h r2"></div>
@@ -658,13 +784,11 @@
                 <div class="gps-road r-v rv1"></div>
                 <div class="gps-road r-v rv2"></div>
                 <div class="gps-road r-v rv3"></div>
-                <!-- Blocks -->
                 <div class="gps-block gb1"></div>
                 <div class="gps-block gb2"></div>
                 <div class="gps-block gb3"></div>
                 <div class="gps-block gb4"></div>
               </div>
-              <!-- Device pins -->
               <div class="gps-pin pin-main" style="left:52%;top:28%">
                 <div class="gps-pin-dot main-dot"></div>
                 <div class="gps-ping"></div>
@@ -681,16 +805,20 @@
                 <div class="gps-pin-dot"></div>
                 <div class="gps-ping"></div>
               </div>
-              <!-- Sidebar overlay -->
               <div class="gps-sidebar-overlay">
-                <div class="gps-title-bar">📍 Dispositivos (29/29)</div>
+                <div class="gps-title-bar">
+                  <span class="icon icon-xs" style="display:inline-flex;vertical-align:middle;margin-right:3px"><i data-lucide="map-pin"></i></span>
+                  Dispositivos (29/29)
+                </div>
                 <div class="gps-device-row"><span class="gps-dot-green"></span><div class="gps-device-line"></div></div>
                 <div class="gps-device-row"><span class="gps-dot-green"></span><div class="gps-device-line short"></div></div>
                 <div class="gps-device-row"><span class="gps-dot-red"></span><div class="gps-device-line"></div></div>
                 <div class="gps-device-row"><span class="gps-dot-green"></span><div class="gps-device-line short"></div></div>
               </div>
-              <!-- Google Maps badge -->
-              <div class="gps-api-badge">Google Maps API</div>
+              <div class="gps-api-badge">
+                <span class="icon" style="display:inline-flex;vertical-align:middle;font-size:0.65rem;margin-right:3px"><i data-lucide="map"></i></span>
+                Google Maps API
+              </div>
             </div>
           </div>
           <div class="project-info">
@@ -700,7 +828,7 @@
             <h3>Sistema de Rastreo GPS</h3>
             <p>Plataforma de monitoreo GPS en tiempo real para flotas de dispositivos. Integración con Google Maps API, estado online/offline, nivel de batería y señal 4G por dispositivo.</p>
             <div class="project-links">
-              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+              <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
             </div>
           </div>
         </div>
@@ -709,41 +837,46 @@
         <div class="project-card reveal-up delay-4">
           <div class="project-visual vis-pay">
             <div class="pay-visual">
-              <!-- Stepper -->
               <div class="pay-stepper">
                 <div class="pay-step active-step">
-                  <div class="ps-circle active-circle">🪪</div>
+                  <div class="ps-circle active-circle">
+                    <span class="icon icon-sm"><i data-lucide="id-card"></i></span>
+                  </div>
                   <span>Cédula</span>
                 </div>
                 <div class="ps-line"></div>
                 <div class="pay-step">
-                  <div class="ps-circle">📄</div>
+                  <div class="ps-circle">
+                    <span class="icon icon-sm"><i data-lucide="file-text"></i></span>
+                  </div>
                   <span>Contrato</span>
                 </div>
                 <div class="ps-line"></div>
                 <div class="pay-step">
-                  <div class="ps-circle">💳</div>
+                  <div class="ps-circle">
+                    <span class="icon icon-sm"><i data-lucide="credit-card"></i></span>
+                  </div>
                   <span>Pago</span>
                 </div>
                 <div class="ps-line"></div>
                 <div class="pay-step">
-                  <div class="ps-circle">✅</div>
+                  <div class="ps-circle">
+                    <span class="icon icon-sm"><i data-lucide="check-circle"></i></span>
+                  </div>
                   <span>Listo</span>
                 </div>
               </div>
-              <!-- Card mock -->
               <div class="pay-card-mock">
                 <div class="pcm-label">Número de cédula</div>
                 <div class="pcm-input">
                   <span>Ej: 1234567890</span>
                 </div>
                 <div class="pcm-btn">
-                  <span>🔍</span> Buscar Contratos
+                  <span class="icon icon-xs" style="display:inline-flex"><i data-lucide="search"></i></span> Buscar Contratos
                 </div>
               </div>
-              <!-- Wompi badge -->
               <div class="wompi-badge">
-                <span class="wompi-w">W</span> Wompi
+                <span class="icon icon-sm"><i data-lucide="wallet"></i></span> Wompi
               </div>
             </div>
           </div>
@@ -754,7 +887,7 @@
             <h3>Pasarela de Pagos en Línea</h3>
             <p>Módulo de pagos en línea integrado con Wompi. Flujo paso a paso (cédula → contrato → pago → comprobante), validaciones en tiempo real y diseño responsive adaptado a diferentes dispositivos.</p>
             <div class="project-links">
-              <a href="#" class="link-btn">Ver proyecto <span>↗</span></a>
+              <a href="#" class="link-btn">Ver proyecto <span class="icon icon-sm"><i data-lucide="arrow-up-right"></i></span></a>
             </div>
           </div>
         </div>
@@ -779,21 +912,27 @@
 
           <div class="contact-info-items">
             <div class="contact-info-item">
-              <div class="ci-icon">📍</div>
+              <div class="ci-icon">
+                <span class="icon icon-md"><i data-lucide="map-pin"></i></span>
+              </div>
               <div>
                 <span class="ci-label">Ubicación</span>
                 <span class="ci-value">Colombia</span>
               </div>
             </div>
             <div class="contact-info-item">
-              <div class="ci-icon">🎓</div>
+              <div class="ci-icon">
+                <span class="icon icon-md"><i data-lucide="graduation-cap"></i></span>
+              </div>
               <div>
                 <span class="ci-label">Formación</span>
                 <span class="ci-value">Tecnólogo en Des. de Software · Técnico en Diseño Gráfico</span>
               </div>
             </div>
             <div class="contact-info-item">
-              <div class="ci-icon">⚡</div>
+              <div class="ci-icon">
+                <span class="icon icon-md"><i data-lucide="zap"></i></span>
+              </div>
               <div>
                 <span class="ci-label">Estado</span>
                 <span class="ci-value" style="color:var(--accent-green)">Disponible ahora</span>
@@ -809,7 +948,7 @@
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.23 0z"/></svg>
             </a>
             <a href="mailto:juanpablo@example.com" class="social-link" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              <span class="icon icon-md"><i data-lucide="mail"></i></span>
             </a>
           </div>
         </div>
@@ -849,15 +988,28 @@
         <div class="footer-logo">
           <span class="logo-bracket">&lt;</span>JPO<span class="logo-bracket">/&gt;</span>
         </div>
-        <p class="footer-tagline">Diseñado & Desarrollado con ❤️ por Juan Pablo Oviedo</p>
+        <p class="footer-tagline">
+          Diseñado & Desarrollado con
+          <span class="icon" style="display:inline-flex;vertical-align:middle;font-size:0.9rem;color:#ff6b9d"><i data-lucide="heart"></i></span>
+          por Juan Pablo Oviedo
+        </p>
       </div>
       <div class="footer-bottom">
         <span>© 2025 Juan Pablo Oviedo Herrera. Todos los derechos reservados.</span>
-        <span class="footer-made">Made in Colombia 🇨🇴</span>
+        <span class="footer-made">
+          Made in Colombia
+          <span class="icon" style="display:inline-flex;vertical-align:middle;font-size:0.85rem;margin-left:4px"><i data-lucide="flag"></i></span>
+        </span>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Inicializar Lucide Icons después del DOM
+    document.addEventListener('DOMContentLoaded', function () {
+      lucide.createIcons();
+    });
+  </script>
 </body>
 </html>
