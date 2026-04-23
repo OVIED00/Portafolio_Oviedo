@@ -751,6 +751,8 @@ body:has(button:hover) .cursor {
 
 .card-avatar {
   position: relative;
+  width: 120px;
+  height: 120px;
 }
 
 .avatar-ring {
@@ -759,6 +761,7 @@ body:has(button:hover) .cursor {
   border-radius: 50%;
   border: 1px solid rgba(99, 255, 180, 0.2);
   animation: ringPulse 3s ease-in-out infinite;
+  z-index: 1; /* 👈 importante */
 }
 
 .ring-2 {
@@ -782,13 +785,15 @@ body:has(button:hover) .cursor {
 }
 
 .avatar-circle {
-  width: 100px;
-  height: 100px;
+  position: relative;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-blue));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  
+  z-index: 2; /* 👈 clave */
+
+  margin: 0 auto;
 }
 
 .avatar-initials {
@@ -2819,3 +2824,4 @@ body:has(button:hover) .cursor {
     box-shadow: 0 0 0 6px rgba(0, 230, 130, 0.08);
   }
 }
+
